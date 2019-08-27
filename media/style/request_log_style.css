@@ -1,0 +1,225 @@
+/*
+    Auteur:         Jordy van Venrooij
+    Controleur:
+    Aanmaakdatum:   30-08-2018
+    Bestandsnaam:   edit_userid_style.css
+*/
+.knopInloggen{
+  border-radius: 5px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #830980;
+  border: #830980 solid 5px;
+}
+
+tr{
+
+}
+
+p{
+  font-weight: 900;
+  font-family: monospace;
+  color: black;
+}
+.box1en2{
+    border-radius: 5px;
+    border: #830980 solid 2px;
+    text-align: center;
+}
+
+.logoBovenkant{
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #ffffff00;
+  border-color: #ffffff00;
+}
+
+.logoBovenkant img{
+  margin: 0;
+  height: 200px;
+}
+
+div#main{
+    display: none;
+}
+
+div#LoginOverlay{
+    position: absolute;
+    padding:0px;
+    margin:0px;
+    top:0px;
+    left:0px;
+    height:100%;
+    width: 100%;
+    background-color: rgba(225, 225, 225, 0.50);
+    z-index:3;
+}
+
+div#LoginOverlay h2{
+    margin: 0px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+div#login td{
+    padding: 3px;
+}
+div#login{
+    width: min-content; width: -moz-min-content;
+    padding: 0px;
+    margin: 0px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+table#loginTable tr{
+    border: 2px #830980 solid;
+}
+table#loginTable td{
+  border: 2px #830980 solid;
+}
+table#loginTable{
+    margin: 0px;
+}
+
+td:last-child, td:last-child p, th:last-child {
+    max-width: 450px;
+}
+
+p.week{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+p.persoon{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+p#even_wachten{
+    left: 50%;
+    top: 120px;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transform: translate(-50%);
+
+    z-index: 4;
+}
+
+p.message{
+    color: black;
+    display: none;
+
+    /* when not correct nor failure i.e. testing color*/
+    background-color: rgba(255, 255, 150, 0.75);
+    text-shadow: 0px 0px 8px white;
+
+    padding: 1px 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+#Last_Request{
+	position: relative;
+    float: right;
+    bottom: 20px;
+    right: 250px;
+}
+
+#getlog{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#print{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#EditUsers{
+    position: absolute;
+    bottom: 0px;
+    left: 100px;
+}
+
+
+.tijdspan{
+    position: relative;
+    float: left;
+    margin: 0px 5px;
+}
+p.tijdspan {
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+
+p.jaar {
+    position: absolute;
+    float: left;
+    top: 0px;
+    right: 150px;
+}
+
+
+
+section#overlay{
+    display: none;
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    background-color: gray;
+
+    border: solid 1px black;
+
+}
+
+section#overlay textarea{
+    margin: 20px 50px;
+
+    max-width: 1067px;
+    min-width: 1067px;
+
+    max-height: 300px;
+    min-height: 300px;
+}
+
+#annuleer_bewerk{
+    position: relative;
+    float: right;
+}

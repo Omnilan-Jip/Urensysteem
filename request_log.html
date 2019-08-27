@@ -1,0 +1,110 @@
+<!--
+    Auteur:         Jordy van Venrooij
+    Controleur:     Gijs van Lokven
+    Aanmaakdatum:   28-08-2018
+    Bestandsnaam:	request_log.html
+-->
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://momentjs.com/downloads/moment.js"></script>
+	<script src="media/js/request_log.js" defer></script>
+	<script src="media/js/validator.js" defer></script>
+	<link rel="stylesheet" href="media/style/global_style.css">
+	<link rel="stylesheet" href="media/style/request_log_style.css">
+	<link href="../themes/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+</head>
+
+<body>
+	<p class="message" id="alert">Test Text For messages when creation was succesful</p>
+	<p class="message" id="even_wachten"></p>
+	<button onclick="sessionStorage.setItem('LoggedIn', false);location.reload();" id="LogOut" style="display: none">Logout</button>
+
+	<div class="logoBovenkant">
+		<a href="request_log.html"><img src="media\images\logo.png" alt="Logo_OmniLan"></a>
+	</div>
+	<div id="login">
+		<form action="javascript:Login();">
+			<table id="loginTable" class="testStyle">
+				<tr>
+					<td><label for="username">
+							<p>Username: </p>
+						</label></td>
+					<td><input class="box1en2" id="username" name="username" type="text"></td>
+				</tr>
+				<tr>
+					<td><label for="password">
+							<p>Password: </p>
+						</label></td>
+					<td><input class="box1en2" id="password" name="password" type="password"></td>
+				</tr>
+				<tr class="rondeHoekOnder">
+					<td colspan="2"><input class="knopInloggen" type="submit" id="btnLogin" name="Login" onclick="" value="Login"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div id="main">
+		<div id="LoginOverlay" style="">
+			<h2 style="">Log eerst In!</h2>
+			<h2>
+			</h2>
+		</div>
+		<p class="persoon">Persoon:
+			<select class="persoon" id="name_list"></select>
+		</p>
+
+		<p class="tijdspan">
+			<span class="tijdspan" id="datum_start"></span>
+			<span class="tijdspan"> - </span>
+			<span class="tijdspan" id="datum_eind"></span>
+		</p>
+
+
+
+		<p class="jaar"> Jaar:
+			<select class="jaar" id="jaar_list"></select>
+		</p>
+
+		<p class="week"> Week:
+			<select class="week" id="week_list"></select>
+		</p>
+
+
+
+		<table id="Log">
+			<tr>
+				<th>Binnekomst</th>
+				<th>Vertrek</th>
+				<th>Opmerking</th>
+				<th>Gewerkte tijd</th>
+				<th>Overuuren</th>
+			</tr>
+			<tr>
+				<td colspan='5' style='text-align: center'>Nog geen data opgevraagd</td>
+			</tr>
+		</table>
+
+		<button id="print" onclick="window.print()">Print</button>
+
+		<button id="getlog" onClick="GetLog()" disabled>Vraag data op</button>
+
+		<p id="Last_Request">Nog geen data opgevraagd</p>
+
+		<button id="EditUsers" onclick="" disabled>Bewerk gebruikers</button>
+	</div>
+
+	<section id="overlay">
+		<textarea id="opmerking-text" rows="20" cols="150" maxlength="150"></textarea>
+		<p style="color:red;font-size: 13px;">Maximaal 150 characters, LET OP voor iedere ' of " worden 3 characters geteld.</p>
+		<button id="bewerk_button">Accepteer bewerking</button><button id="annuleer_bewerk" onclick="document.getElementById('overlay').style.display = 'none'">Annuleren</button>
+	</section>
+
+</body>
+
+</html>

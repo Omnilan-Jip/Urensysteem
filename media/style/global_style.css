@@ -1,0 +1,91 @@
+/*
+    Auteur:         Jordy van Venrooij
+    Controleur:
+    Aanmaakdatum:   28-08-2018
+    Bestandsnaam:   Global_Style.css
+*/
+
+/* zecht dat de site in landscape is gemaakt zodat de printer dit automatiesch gebruikt*/
+@page {
+    size: landscape;
+}
+
+/* print achtergrond kleuren/foto's*/
+@media print {
+    .graph-image img{display:inline;}
+}
+
+body{
+  background-image: linear-gradient(60deg, #830980, #ffffff, #ffffff, #ffffff, #830980);
+  background-repeat: repeat-x;
+  height: -webkit-fill-available;
+}
+
+html, body, p{
+    margin: 0px;
+    padding: 0px;
+}
+
+div{
+    width: 1200px;
+    /*height: 500px;*/
+    margin: 50px auto;
+    background-color: white;
+    border: solid 1.5px white;
+    border-radius: 25px;
+
+    position: relative;
+}
+
+table{
+    margin: 50px 20px;
+    border-collapse: collapse;
+    word-wrap:break-word;
+    text-align: center;
+}
+td, th{
+    border: solid 1px black;
+    padding: 0px 3px;
+}
+table tr:nth-child(odd){
+    background-color: white !important;
+}
+table tr:nth-child(even){
+    background-color: white !important;
+}
+table tr:nth-child(1){
+    background-color: white !important;
+}
+
+table#Log{
+    width: 1157px;
+}
+
+table#Log th:nth-child(1),
+table#Log th:nth-child(2){
+    width: 190px;
+}
+table#Log th:nth-child(3){
+    width: 580px;
+}
+
+table#Log td p, table#User_ID td p, table#User_ID td input{
+    float: left;
+    padding: 0px 3px;
+
+    text-align: left;
+}
+
+table#Log td p{
+    max-width: 500px;
+    width: 500px;
+}
+
+table#User_ID td button, table#Log td button{
+    float: right;
+    padding: 0px 3px;
+}
+
+table#User_ID td input{
+    display: none;
+}
