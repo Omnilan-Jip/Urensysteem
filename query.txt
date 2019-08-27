@@ -1,3 +1,5 @@
 Query om een nieuwe user aan te maken:
 
 "INSERT INTO `log_users` (`id`, `naam`, `username`, `password`, `premissions`) VALUES (NULL, 'Jip Clappers', 'Jip', PASSWORD('Omni-Janneke'), '2')"
+
+test
